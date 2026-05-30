@@ -100,7 +100,7 @@ async def chat_endpoint(request: ChatRequest):
     if session_id not in sessions:
         try:
             sessions[session_id] = client.chats.create(
-                model="gemini-2.0-flash",
+                model="gemini-2.5-flash",
                 config=types.GenerateContentConfig(
                     system_instruction=SYSTEM_PROMPT,
                     temperature=0.7
